@@ -1,0 +1,37 @@
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[user]
+	name = Alan
+	email = alan@gangleri.net
+[alias]
+	p = push
+	pl = pull
+	s = status
+	c = commit
+	cm = commit -m
+	cam = commit -am
+	b = branch
+	co = checkout
+	co- = checkout -- .
+	com = checkout master
+	cob = checkout -b
+	d = diff
+	l = log -p
+	rH = reset --hard HEAD
+	st = stash
+	mom = merge origin/master
+	mm = merge master
+	contains = !sh -c 'git branch -a --contains $1'
+	search = !sh -c 'git grep "$1" $(git rev-list --all)'
+	puo = "!f(){ \
+			git push -u origin $(git branch | grep \\* | cut -d ' ' -f2); \
+		}; f"
+	bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
+	alias = "!f() { git config --list | grep alias | sed -r 's/alias\\.(.+)=(.+)/\\1\\t\\t\\2/'; }; f"
+	al=alias
+	cmp = "!f(){ \
+			git checkout master; git pull \
+		}; f"

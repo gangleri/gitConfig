@@ -7,6 +7,7 @@
 	name = Alan
 	email = alan@gangleri.net
 [alias]
+	bls = branch --list
 	p = push
 	pl = pull
 	s = status

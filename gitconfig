@@ -19,6 +19,8 @@
 	co- = checkout -- .
 	com = checkout master
 	cob = checkout -b
+	t =  tag
+	ta = tag  -a 
 	d = diff
 	l = log -p
 	rH = reset --hard HEAD

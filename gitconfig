@@ -12,6 +12,7 @@
 	pl = pull
 	s = status
 	c = commit
+	ca = commit -a 
 	cm = commit -m
 	cam = commit -am
 	b = branch
@@ -36,5 +37,9 @@
 	alias = "!f() { git config --list | grep alias | sed -r 's/alias\\.(.+)=(.+)/\\1\\t\\t\\2/'; }; f"
 	al=alias
 	cmp = "!f(){ \
-			git checkout master; git pull \
+			git checkout master; git pull; \
+		}; f"
+	dn = "!f() { \
+		var=($(git status | grep 'modified' | sed s/modified\\://g)); \
+		git diff ${var[$1]};  \
 		}; f"

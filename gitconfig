@@ -1,11 +1,17 @@
+[user]
+	name = Alan
+	email = alan@gangleri.net
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[user]
-	name = Alan
-	email = alan@gangleri.net
+[http]
+	sslVerify = true
+	cookiefile = /Users/alan/.gitcookies
+# [url "git@skoonit.github.com:skoonit"]
+	# insteadOf = git@github.com:skoonit
+	# insteadOf = https://github.com/skoonit
 [alias]
 	bls = branch --list
 	p = push
@@ -36,5 +42,9 @@
 	alias = "!f() { git config --list | grep alias | sed -r 's/alias\\.(.+)=(.+)/\\1\\t\\t\\2/'; }; f"
 	al=alias
 	cmp = "!f(){ \
-			git checkout master; git pull \
+			git checkout master; git pull; \
 		}; f"
+	dn = "!f() { \
+        var=($(git status | grep 'modified' | sed s/modified\\://g)); \
+        git diff ${var[$1]};  \
+        }; f"

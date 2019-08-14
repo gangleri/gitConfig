@@ -1,11 +1,17 @@
+[user]
+	name = Alan
+	email = alan@gangleri.net
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[user]
-	name = Alan
-	email = alan@gangleri.net
+[http]
+	sslVerify = true
+	cookiefile = /Users/alan/.gitcookies
+# [url "git@skoonit.github.com:skoonit"]
+	# insteadOf = git@github.com:skoonit
+	# insteadOf = https://github.com/skoonit
 [alias]
 	bls = branch --list
 	p = push

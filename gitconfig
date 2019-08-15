@@ -21,6 +21,7 @@
 	cm = commit -m
 	cam = commit -am
 	b = branch
+	bs = "!f() { git  branch --all | grep -i $1; }; f"
 	co = checkout
 	co- = checkout -- .
 	com = checkout master

@@ -13,6 +13,7 @@
 	# insteadOf = git@github.com:skoonit
 	# insteadOf = https://github.com/skoonit
 [alias]
+	aa = add -A
 	bls = branch --list
 	p = push
 	pl = pull

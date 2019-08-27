@@ -19,6 +19,7 @@
 	pl = pull
 	s = status
 	c = commit
+	cl = clone
 	cm = commit -m
 	cam = commit -am
 	b = branch

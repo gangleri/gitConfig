@@ -13,15 +13,19 @@
 	# insteadOf = git@github.com:skoonit
 	# insteadOf = https://github.com/skoonit
 [alias]
+	aa = add -A
 	bls = branch --list
 	p = push
 	pl = pull
 	s = status
+	bl = branch -l
 	c = commit
 	ca = commit -a 
+	cl = clone
 	cm = commit -m
 	cam = commit -am
 	b = branch
+	bs = "!f() { git  branch --all | grep --color=always -i $1; }; f"
 	co = checkout
 	co- = checkout -- .
 	com = checkout master

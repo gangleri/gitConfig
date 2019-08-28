@@ -18,6 +18,7 @@
 	p = push
 	pl = pull
 	s = status
+	bl = branch -l
 	c = commit
 	cl = clone
 	cm = commit -m

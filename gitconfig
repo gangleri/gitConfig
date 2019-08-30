@@ -26,6 +26,7 @@
 	cam = commit -am
 	b = branch
 	bs = "!f() { git  branch --all | grep --color=always -i $1; }; f"
+	cf = diff --name-only --diff-filter=U
 	co = checkout
 	co- = checkout -- .
 	com = checkout master

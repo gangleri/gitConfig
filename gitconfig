@@ -26,11 +26,13 @@
 	s = status
 	bl = branch -l
 	c = commit
+	ca = commit -a 
 	cl = clone
 	cm = commit -m
 	cam = commit -am
 	b = branch
 	bs = "!f() { git  branch --all | grep --color=always -i $1; }; f"
+	cf = diff --name-only --diff-filter=U
 	co = checkout
 	co- = checkout -- .
 	com = checkout master
@@ -56,6 +58,6 @@
 			git checkout master; git pull; \
 		}; f"
 	dn = "!f() { \
-        var=($(git status | grep 'modified' | sed s/modified\\://g)); \
-        git diff ${var[$1]};  \
-        }; f"
+		var=($(git status | grep 'modified' | sed s/modified\\://g)); \
+		git diff ${var[${1:-0}]};  \
+		}; f"

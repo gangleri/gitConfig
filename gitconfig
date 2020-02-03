@@ -12,6 +12,12 @@
 # [url "git@skoonit.github.com:skoonit"]
 	# insteadOf = git@github.com:skoonit
 	# insteadOf = https://github.com/skoonit
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
+[url "git@bitbucket.org:"]
+	insteadOf = https://bitbucket.org/
+[url "git@github.com:"]
+	insteadOf = https://github.com/
 [alias]
 	aa = add -A
 	bls = branch --list
@@ -29,6 +35,7 @@
 	co- = checkout -- .
 	com = checkout master
 	cob = checkout -b
+	i = init
 	t =  tag
 	ta = tag  -a 
 	d = diff

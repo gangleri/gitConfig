@@ -9,15 +9,12 @@
 [http]
 	sslVerify = true
 	cookiefile = /Users/alan/.gitcookies
-# [url "git@skoonit.github.com:skoonit"]
-	# insteadOf = git@github.com:skoonit
-	# insteadOf = https://github.com/skoonit
 [url "git@gitlab.com:"]
 	insteadOf = https://gitlab.com/
 [url "git@bitbucket.org:"]
 	insteadOf = https://bitbucket.org/
-[url "git@github.com:"]
-	insteadOf = https://github.com/
+# [url "git@github.com:"]
+# 	insteadOf = https://github.com/
 [alias]
 	aa = add -A
 	bls = branch --list
